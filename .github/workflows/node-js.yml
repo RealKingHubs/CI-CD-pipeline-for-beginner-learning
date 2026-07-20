@@ -4,9 +4,8 @@ on: [push]
 
 jobs:
 test-javascript:
-  steps:
   runs-on: Ubuntu-latest
-
+  steps:
     - name: Copy Repository Code
       uses: actions/checkout@v4
 
