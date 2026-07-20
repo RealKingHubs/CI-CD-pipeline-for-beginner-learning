@@ -1,13 +1,13 @@
-# 1. The Name
-name: My First Pipeline
+# # 1. The Name
+# name: My First Pipeline
 
-# 2. The Trigger (When to run)
-on: [push]
+# # 2. The Trigger (When to run)
+# on: [push]
 
-# 3. The Work (What to do)
-jobs:
- say-hello:
-   runs-on: Ubuntu-latest
-   steps:
-     - name: Run A Shell Command
-       run: echo "Hello World!, I succssfully ran a Script."
+# # 3. The Work (What to do)
+# jobs:
+#  say-hello:
+#    runs-on: Ubuntu-latest
+#    steps:
+#      - name: Run A Shell Command
+#        run: echo "Hello World!, I succssfully ran a Script."

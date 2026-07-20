@@ -1,9 +1,9 @@
-name: The Day2 Pipeline lesson
-on: [push]
-jobs:
-  says-hello:
-    runs-on: Ubuntu-latest
-    steps:
-      - name: Run A shell CMD
-        run: echo "Hello World , I have ran it !"
+# name: The Day2 Pipeline lesson
+# on: [push]
+# jobs:
+#   says-hello:
+#     runs-on: Ubuntu-latest
+#     steps:
+#       - name: Run A shell CMD
+#         run: echo "Hello World , I have ran it !"
 
