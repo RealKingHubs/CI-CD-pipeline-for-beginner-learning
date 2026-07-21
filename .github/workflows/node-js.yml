@@ -3,19 +3,19 @@ name: Node JS Pipeline
 on: [push]
 
 jobs:
-test-javascript:
-  runs-on: Ubuntu-latest
-  steps:
-    - name: Copy Repository Code
-      uses: actions/checkout@v4
+  test-javascript:
+    runs-on: Ubuntu-latest
+    steps:
+      - name: Copy Repository Code
+        uses: actions/checkout@v4
 
-    - name: Install Node JS
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
+      - name: Install Node JS
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-    - name: Install packages
-      run: npm ci
+      - name: Install packages
+        run: npm ci
 
     - name: Run Test
       run: npm test  
