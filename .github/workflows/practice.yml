@@ -1,0 +1,29 @@
+#The Name
+name: Practice Node Js Pipeline
+
+#The trigger 
+on: [push]
+
+#The jobs
+jobs:
+  practice-Javascript-pipeline:
+  #Which Os
+    runs-on: Ubuntu-Latest
+    #Steps to take from top to bottom
+    steps:
+    #Name
+      - name: Copy Repo Code
+      #command to execute
+        run: actions/checkout@v4
+
+      - name: Setup Node.js
+        run: actions/setup-node@v4
+        #With which version of node js to use
+        with:
+          version: '20'
+
+      - name: Install Node JS Packages
+        run: npm ci
+
+      - name: Testing
+        run: npm test
