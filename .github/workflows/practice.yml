@@ -6,24 +6,24 @@ on: [push]
 
 #The jobs
 jobs:
-practice-Javascript-pipeline:
+  practice-Javascript-pipeline:
   #Which Os
-  runs-on: Ubuntu-Latest
+    runs-on: Ubuntu-Latest
     #Steps to take from top to bottom
-  steps:
+    steps:
     #Name
-    - name: Copy Repo Code
+      - name: Copy Repo Code
       #command to execute
-      run: actions/checkout@v4
+        run: actions/checkout@v4
 
-    - name: Setup Node.js
-      run: actions/setup-node@v4
-        #With which version of node js to use
-      with:
-        version: '20'
+      - name: Setup Node.js
+        run: actions/setup-node@v4
+        #With which version
+        with:
+          version: '20'
 
-    - name: Install Node JS Packages
-      run: npm ci
+      - name: Install Node JS Packages
+        run: npm ci
 
-    - name: Testing
-      run: npm test
+      - name: Testing
+        run: npm test
