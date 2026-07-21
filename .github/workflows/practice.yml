@@ -14,10 +14,10 @@ jobs:
     #Name
       - name: Copy Repo Code
       #command to execute
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        run: actions/setup-node@v4
+        uses: actions/setup-node@v4
         #With which version
         with:
         version: '20'
