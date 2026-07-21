@@ -1,21 +1,24 @@
-name: Node JS Pipeline
+name: Node.js CI
 
 on: [push]
 
 jobs:
   test-javascript:
-    runs-on: Ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: Copy Repository Code
+      # Step 1: Pull your code from your repo onto the cloud computer
+      - name: Copy Repo Code
         uses: actions/checkout@v4
 
-      - name: Install Node JS
+      # Step 2: Install the language environment
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install packages
+      # Step 3: Run your regular project commands
+      - name: Install Packages
         run: npm ci
 
-      - name: Run Test
-        run: npm test  
+      - name: Run Tests
+        run: npm test
