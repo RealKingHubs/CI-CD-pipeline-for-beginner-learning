@@ -1,0 +1,21 @@
+name: Multi-Step Pipeline
+
+on: [push]
+
+jobs:
+  multi-steps-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: echo "Installing dependencies..."
+
+      - name: Run Tests
+        run: echo "Running Tests.."
+
+      - name: Build Application
+        run: echo "Building Application..."
