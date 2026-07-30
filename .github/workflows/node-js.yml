@@ -1,0 +1,23 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  test-javascript:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Check Out Code
+        run: actions/checkout@v4
+
+      - name: Set Up Node JS
+        uses: actions/setup-nodejs@v4
+        with:
+          node-version: "20"
+
+      - name: Install Packages
+        run: npm ci
+
+      - name: Test
+        run: npm test
