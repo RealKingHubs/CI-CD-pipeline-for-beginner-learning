@@ -1,6 +1,6 @@
 name: Pull Request Validation
 
-on: [push]
+on: [pull_request]
 
 env:
   CHECK: Validating
