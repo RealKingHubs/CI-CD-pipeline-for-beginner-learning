@@ -1,13 +1,16 @@
-# 1. The Name
-name: My First Pipeline
+name: Hello World Pipeline
 
-# 2. The Trigger (When to run)
 on: [push]
 
-# 3. The Work (What to do)
 jobs:
- say-hello:
-   runs-on: Ubuntu-latest
-   steps:
-     - name: Run A Shell Command
-       run: echo "Hello World!, I succssfully ran a Script."
+  hello-world-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+     
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print tasks
+        run: echo "Starting Pipeling"
+        run: echo "Pipeline complete"
