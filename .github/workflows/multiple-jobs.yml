@@ -16,13 +16,13 @@ jobs:
       - name: Run Test
         run: echo "Running Tests"
     
-build:
-  needs: test
-  runs-on: ubuntu-latest
+  build:
+    needs: test
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: Check Out code
-      uses: actions/checkout@v4
+    steps:
+      - name: Check Out code
+        uses: actions/checkout@v4
 
-    - name: Build Application
-      run: echo "Building Application"
+      - name: Build Application
+        run: echo "Building Application"
