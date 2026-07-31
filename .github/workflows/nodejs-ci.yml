@@ -1,0 +1,29 @@
+name: NodeJS CI Pipeline
+
+on: [push]
+
+jobs:
+  NodeJS-CI:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Set Up NodeJS
+        uses: actions/setup-node@v7
+        with:
+          node-version: "20"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test
+
+  build:
+    needs: NodeJS-CI
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - name: Build Application
+        run: npm run build
