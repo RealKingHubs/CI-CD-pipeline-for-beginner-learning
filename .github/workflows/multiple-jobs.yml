@@ -1,0 +1,28 @@
+name: Multiple Jobs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout Codes
+      uses: actions/checkout@v4
+
+    - name: Run Test
+      run: echo "Running Testing"
+    
+build:
+  needs: run-test
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: Check Out code
+      uses: actions/checkout@v4
+
+    - name: Build Application
+      run: echo "Building Application"
