@@ -19,11 +19,5 @@ jobs:
       - name: Run Tests
         run: npm test
 
-  build:
-    needs: NodeJS-CI
-    runs-on: ubuntu-latest
-
-    steps:
-    
       - name: Build Application
         run: npm run build
