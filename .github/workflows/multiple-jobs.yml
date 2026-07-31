@@ -6,18 +6,18 @@ on:
       - main
 
 jobs:
-  run-test:
+  test:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout Codes
-      uses: actions/checkout@v4
+    steps:
+      - name: Checkout Codes
+        uses: actions/checkout@v4
 
-    - name: Run Test
-      run: echo "Running Testing"
+      - name: Run Test
+        run: echo "Running Tests"
     
 build:
-  needs: run-test
+  needs: test
   runs-on: ubuntu-latest
 
   steps:
