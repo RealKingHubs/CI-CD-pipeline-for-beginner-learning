@@ -1,0 +1,28 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+
+    depends_on:
+      - db
+
+    environment:
+      DB_HOST: db
+
+  db:
+    image: postgres
+
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+    
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres-data:/va/lib/postgresql/data
+
+volumes:
+  postgres-data:
