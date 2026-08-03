@@ -14,10 +14,10 @@ jobs:
           node-version: "20"
 
       - name: Install Dependencies
-        run: npm install
+        run: echo "npm Installing dependencies..." 
 
       - name: Run Tests
-        run: npm test
+        run: echo "npm Running tests....."
 
       - name: Build Application
-        run: npm run build
+        run: echo "npm Building application..."

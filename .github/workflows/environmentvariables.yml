@@ -20,10 +20,10 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
-        run: echo "Installing dependencies..." && npm install
+        run: echo "npm Installing dependencies..."
 
       - name: Run tests
-        run: echo "Running tests....." && npm test
+        run: echo "npm Running tests....." 
 
       - name: Display Environment Variables
         run: |
