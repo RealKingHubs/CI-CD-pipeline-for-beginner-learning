@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: ubuntu-latest
+        uses: actions/checkout@v4
 
       - name: Download Artifact
         uses: actions/download-artifact@v4
