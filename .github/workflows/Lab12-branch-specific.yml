@@ -1,5 +1,4 @@
-name: Lab 12 Branch-Specific Pipeline
-
+name: Lab 12 Branch Specific Pipeline
 on:
   push:
     branches: [main]
@@ -11,4 +10,6 @@ on:
         steps:
           - name: checkout Code
             uses: actions/checkout@v4
+
+          - name: Display message
             run: echo "Allowed to deploy only on main Branches"
