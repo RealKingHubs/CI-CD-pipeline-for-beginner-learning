@@ -1,4 +1,4 @@
-name: NodeJS CI Pipeline
+name: Lab 6 NodeJS CI Pipeline
 
 on: [push]
 

@@ -1,4 +1,4 @@
-name: Hello World Pipeline
+name: Lab 1 Hello World Pipeline
 
 on: [push]
 

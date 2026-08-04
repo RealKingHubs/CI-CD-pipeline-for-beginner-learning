@@ -1,4 +1,4 @@
-name: Multi-Step Pipeline
+name: Lab 3 Multi-Step Pipeline
 
 on: [push]
 

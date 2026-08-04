@@ -1,4 +1,4 @@
-name: Multiple Jobs
+name: Lab 8 Multiple Jobs
 
 on:
   push:

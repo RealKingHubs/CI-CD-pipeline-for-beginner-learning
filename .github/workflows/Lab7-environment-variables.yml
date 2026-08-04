@@ -1,4 +1,4 @@
-name: Environment Variables
+name: Lab 7 Environment Variables
 
 on: [push, pull_request]
 

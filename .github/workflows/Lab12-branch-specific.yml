@@ -1,0 +1,14 @@
+name: Lab 12 Branch-Specific Pipeline
+
+on:
+  push:
+    branches: [main]
+
+    jobs:
+      test:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: checkout Code
+            uses: actions/checkout@v4
+            run: echo "Allowed to deploy only on main Branches"

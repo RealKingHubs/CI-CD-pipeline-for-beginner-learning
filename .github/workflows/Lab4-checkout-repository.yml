@@ -1,4 +1,4 @@
-name: Checkout Repository
+name: Lab 4 Checkout Repository
 
 on: [push]
 

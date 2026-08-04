@@ -1,4 +1,4 @@
-name: Python CI Pipeline
+name: Lab 5 Python CI Pipeline
 
 on: [push]
 
