@@ -1,4 +1,4 @@
-name: Build Artifact Pipeline
+name: Lab 10 Build Artifact
 
 on: [push]
 
